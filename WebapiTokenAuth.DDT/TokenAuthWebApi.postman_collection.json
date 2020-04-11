@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "3df40c68-b84b-4309-8da3-9971de2f3ad0",
+		"name": "TokenAuthWebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:62225/api/user/forall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62225",
+					"path": [
+						"api",
+						"user",
+						"forall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateTokenForAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:62225/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62225",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateTokenForUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:62225/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62225",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetForAuthenticate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yR76ClqI67dS4tm9b5TYyIK8ZGERcEtdUQvv7u3AnUrazMTaAfAI8IwjZUXDQrMOnTKMzRScP7ikVmnZDcaBK-H6kUjFoDax2YLnag1rgsL-xQaCPpGvoDSwMAP_4IHZkH-9a8aN8VgqlRPgoMbpXZkC0F9NsI8pjtjmwj29_2MvGinBAeBI0g-y8JhoemgQedMaOZ67Fr9LCo3bBV3za16hRkX1p_uo678f2OVNNHyndpFWR005DuM1m3VDx-W1Di3SWWLL7X9RPGHEZJf366-U_k2di6hRIOs2SZD5LNhOP4ike_YfqB8hAD6liGmO",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:62225/api/user/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62225",
+					"path": [
+						"api",
+						"user",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetForAuthorize",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "U4bPVr-sGo23_fl7YTFLe0PjL-UgYANEAQCt9haMLeTrmuoRzFaaPV0csclvVdAVkZ4sk96-fxk65Ut5LkdEkRVtXa7SuDki-aMLS7LUJaL4i-eE-I4mQxVmnz-Q-ycQ9ypzKey9aRPC8nQcjcCHXItyxww_HMVQF1OBfkXZgPb963CtMHXY3XLoFsgRlMbUalCMj-VfrMLm138YJJ-HIZ9mpFh1kD3y1MIM2h2PjQcp44DmNtkBQLQoTzEwXliYuWn9h82SY8ZphmBcGlPs6h4hPrPfoYcO9DkZIt7GHhFt3tHzKU01_PNbPuaeuMJd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:62225/api/user/authorize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "62225",
+					"path": [
+						"api",
+						"user",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
